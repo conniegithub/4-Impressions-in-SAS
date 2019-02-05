@@ -1,5 +1,5 @@
-%let txt = 'C:\Users\yongy\Documents\My SAS Files\9.4\impression data st.txt';
-%let xlsx = 'C:\Users\yongy\Documents\My SAS Files\9.4\impression data st.xlsx';
+%let txt = 'C:\Users\..\impression data st.txt';
+%let xlsx = 'C:\Users\..\impression data st.xlsx';
 
 
 *import tab-delimited TXT file using DATA step;
