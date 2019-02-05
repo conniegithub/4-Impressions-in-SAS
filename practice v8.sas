@@ -54,7 +54,7 @@ options mprint mlogic symbolgen;
 %mend combine;
 
 *================================================================================;
-%let xlsx = 'C:\Users\yongy\Documents\My SAS Files\9.4\impression data st.xlsx';
+%let xlsx = 'C:\Users\..\impression data st.xlsx';
 %let sheet1 = GMO_data;
 %let sheet2 = camp_data;
 
@@ -411,13 +411,13 @@ bin_4_age: 41 to 47
 */
 
 *data validation;
-%include "C:\Users\yongy\Documents\My SAS Files\9.4\codesforbinand__\decile_analysis.mac.sas";
-%include "C:\Users\yongy\Documents\My SAS Files\9.4\codesforbinand__\ks_c.mac.sas";
+%include "C:\Users\..\codesforbinand__\decile_analysis.mac.sas";
+%include "C:\Users\..\codesforbinand__\ks_c.mac.sas";
 %decile_analysis(outlogit, pred, response, visitor);
 %ks_c(data_var=outlogit, parm_var=response, score_var=pred);
 
 ods pdf file = "output.pdf";
-%include "C:\Users\yongy\Documents\My SAS Files\9.4\codesforbinand__\logistic_reg_g.mac.sas";
+%include "C:\Users\..\codesforbinand__\logistic_reg_g.mac.sas";
 %logistic_reg(mdata = nSheet1, target = response, r_vars = NInet Ngender day_type &bin_vars, type = type, bureau = bureau, 
                       keep = 0, sl= 0.01, selection = stepwise, weight = weight);
 ods pdf close;
