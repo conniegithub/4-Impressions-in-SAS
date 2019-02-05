@@ -93,7 +93,7 @@ proc format;
 run;
 */
 *================================================================================;
-%let xlsx = 'C:\Users\yongy\Documents\My SAS Files\9.4\impression data st.xlsx';
+%let xlsx = 'C:\Users\..\impression data st.xlsx';
 %let sheet1 = GMO_data;
 %let sheet2 = camp_data;
 
